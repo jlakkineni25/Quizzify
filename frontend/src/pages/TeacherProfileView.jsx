@@ -53,7 +53,19 @@ const TeacherProfileView = () => {
   // --- EVENT HANDLERS ---
   // Handles the logic for creating and triggering a CSV file download of a quiz's questions.
   const handleDownload = async (quizId, quizCode) => {
-    // ... (Your existing handleDownload logic is correct and remains here)
+    try {
+      const response = await api.get(`/quizzes/${quizId}/download`, { responseType: 'blob' });
+      const url = window.URL.createObjectURL(new Blob([response.data]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', `quiz-questions-${quizCode}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      link.parentNode.removeChild(link);
+    } catch (error) {
+      console.error('Failed to download quiz CSV:', error);
+      alert('Failed to download quiz data.');
+    }
   };
 
   // --- RENDER LOGIC ---

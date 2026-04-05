@@ -49,15 +49,15 @@ const Register = () => {
         <h2>Create an Account</h2>
         <div className="form-group">
           <label htmlFor="name">Full Name</label>
-          <input type="text" name="name" id="name" placeholder="John Doe" onChange={handleChange} required />
+          <input type="text" name="name" id="name" onChange={handleChange} required />
         </div>
         <div className="form-group">
           <label htmlFor="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="you@example.com" onChange={handleChange} required />
+          <input type="email" name="email" id="email" onChange={handleChange} required />
         </div>
         <div className="form-group">
           <label htmlFor="password">Password</label>
-          <input type="password" name="password" id="password" placeholder="••••••••" onChange={handleChange} required />
+          <input type="password" name="password" id="password" onChange={handleChange} required />
         </div>
         <div className="form-group">
           <label htmlFor="role">I am a...</label>
@@ -71,7 +71,7 @@ const Register = () => {
           <>
             <div className="form-group">
               <label htmlFor="rollNumber">Roll Number</label>
-              <input type="text" name="rollNumber" id="rollNumber" placeholder="e.g., 21BCE0001" onChange={handleChange} />
+              <input type="text" name="rollNumber" id="rollNumber" onChange={handleChange} />
             </div>
             <div className="form-group">
               <label htmlFor="dateOfBirth">Date of Birth</label>
@@ -83,7 +83,7 @@ const Register = () => {
         {formData.role === 'teacher' && (
           <div className="form-group">
             <label htmlFor="teacherId">Teacher ID</label>
-            <input type="text" name="teacherId" id="teacherId" placeholder="e.g., T-12345" onChange={handleChange} />
+            <input type="text" name="teacherId" id="teacherId" onChange={handleChange} />
           </div>
         )}
 

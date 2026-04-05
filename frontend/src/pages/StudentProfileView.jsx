@@ -58,7 +58,31 @@ const StudentProfileView = () => {
   // --- EVENT HANDLERS ---
   // Handles the logic for creating and triggering a text file download of a quiz report.
   const handleDownload = (attempt) => {
-    // ... (Your existing handleDownload logic is correct and remains here)
+    const reportContent = `
+Quiz Report
+==================
+Quiz Title: ${attempt.quizTitle}
+Taken On: ${new Date(attempt.createdAt).toLocaleString()}
+Score: ${attempt.score} / ${attempt.totalQuestions} (${((attempt.score / attempt.totalQuestions) * 100).toFixed(2)}%)
+
+Detailed Breakdown:
+-------------------
+${attempt.detailedReport.map((item, index) => `
+Q${index + 1}: ${item.questionText}
+Your Answer: ${item.yourAnswer}
+Correct Answer: ${item.correctAnswer}
+Result: ${item.isCorrect ? 'Correct' : 'Incorrect'}
+`).join('\n')}
+`;
+    const blob = new Blob([reportContent.trim()], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `quiz-report-${attempt.quizTitle.replace(/\s+/g, '_')}-${attempt._id}.txt`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
   };
 
   // --- RENDER LOGIC ---
