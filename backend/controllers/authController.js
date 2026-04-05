@@ -20,10 +20,12 @@ const createToken = (user) => {
 exports.registerUser = async (req, res) => {
   const { name, email, password, role, rollNumber, dateOfBirth, teacherId } = req.body;
   try {
-    const user = await User.create({ 
-      name, email, password, role, 
-      rollNumber, dateOfBirth, teacherId 
-    });
+    const userData = { name, email, password, role };
+    if (rollNumber) userData.rollNumber = rollNumber;
+    if (dateOfBirth) userData.dateOfBirth = dateOfBirth;
+    if (teacherId) userData.teacherId = teacherId;
+
+    const user = await User.create(userData);
     const token = createToken(user);
     res.status(201).json({ token }); 
   } catch (error) {
