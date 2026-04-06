@@ -1,0 +1,34 @@
+/* src/index.css */
+
+/* Make sure the root elements fill the entire viewport height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+/* Use a flexbox layout on the #root div to make the main content area 
+  expand and push any footer to the bottom.
+*/
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Use min-height to allow content to grow longer */
+}
+
+.container {
+  flex: 1; /* This makes the main container grow to fill available space */
+  max-width: 1200px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
