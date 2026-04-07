@@ -1,0 +1,107 @@
+/* src/pages/teacher/TeacherDashboard.css */
+.teacher-dashboard {
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.create-quiz-button {
+  background-color: #27ae60;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.create-quiz-button:hover {
+  background-color: #229954;
+}
+
+.quizzes-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.quizzes-table th, .quizzes-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.quizzes-table th {
+  background-color: #f9f9f9;
+}
+
+.quizzes-table tr:last-child td {
+  border-bottom: none;
+}
+
+.action-button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.action-button:hover {
+  opacity: 0.8;
+}
+
+.edit-button {
+  background-color: #3498db;
+}
+
+/* Add these styles to your TeacherDashboard.css file */
+
+.action-cell {
+  display: flex;
+  gap: 10px; /* Adds space between buttons */
+}
+
+.delete-button {
+  background-color: #e74c3c;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+/* Add these styles to your TeacherDashboard.css file */
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.manage-subjects-button {
+  background-color: #f39c12;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.manage-subjects-button:hover {
+  background-color: #e67e22;
+}

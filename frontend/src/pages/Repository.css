@@ -1,0 +1,88 @@
+/* src/pages/Repository.css */
+.repository-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.repository-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.repository-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.repository-header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.subject-group {
+  margin-bottom: 3rem;
+}
+
+.subject-title {
+  font-size: 1.8rem;
+  color: #3498db;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.quiz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.quiz-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.quiz-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-card-meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.quiz-card-description {
+  flex-grow: 1;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.attempt-quiz-button {
+  background-color: #27ae60;
+  color: white;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.attempt-quiz-button:hover {
+  background-color: #229954;
+}
