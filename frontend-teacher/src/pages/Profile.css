@@ -1,0 +1,100 @@
+/* src/pages/Profile.css */
+
+/* =================================================================
+--- LAYOUT & CARDS ---
+================================================================= */
+.profile-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.profile-details-card, .role-specific-view {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.profile-details-card h2, .role-specific-view h2 {
+  margin-top: 0;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* =================================================================
+--- TEACHER VIEW TABLE ---
+================================================================= */
+.quiz-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.quiz-table th, .quiz-table td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.quiz-table th {
+  background-color: #f9f9f9;
+}
+
+/* =================================================================
+--- STUDENT VIEW CARDS ---
+================================================================= */
+.attempts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.attempt-card {
+  border: 1px solid #eee;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.attempt-card-info h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.attempt-card-info p {
+  margin: 0;
+  color: #555;
+}
+
+/* =================================================================
+--- BUTTONS ---
+================================================================= */
+.download-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.download-button:hover {
+  background-color: #2980b9;
+}
+
+/* =================================================================
+--- RESPONSIVE STYLES ---
+================================================================= */
+@media (max-width: 768px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+  }
+}

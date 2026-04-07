@@ -20,8 +20,8 @@ const Navbar = () => {
     navigate('/login');
   };
 
-  const homePath = user 
-    ? (user.role === 'teacher' ? '/teacher/dashboard' : '/student/join') 
+  const homePath = user
+    ? '/student/join'
     : '/';
 
   // =================================================================
