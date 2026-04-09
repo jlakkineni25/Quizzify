@@ -15,7 +15,7 @@ const Register = () => {
     name: '',
     email: '',
     password: '',
-    role: 'student', 
+    role: 'student',
     rollNumber: '',
     dateOfBirth: '',
     teacherId: '',
@@ -36,7 +36,11 @@ const Register = () => {
       navigate('/login');
     } catch (error) {
       console.error('Registration failed:', error);
-      alert('Registration failed. The email might already be in use.');
+      const message =
+        error?.response?.data?.error ||
+        error?.message ||
+        'Registration failed. Please try again.';
+      alert(`Registration failed: ${message}`);
     }
   };
 
